@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		643F81C02DF07A8A008EB67C /* habit_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F81BF2DF07A8A008EB67C /* habit_trackerApp.swift */; };
-		643F81C22DF07A8A008EB67C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F81C12DF07A8A008EB67C /* ContentView.swift */; };
+		643F81C22DF07A8A008EB67C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F81C12DF07A8A008EB67C /* WelcomeView.swift */; };
 		643F81C42DF07A94008EB67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643F81C32DF07A94008EB67C /* Assets.xcassets */; };
 		643F81C82DF07A94008EB67C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643F81C72DF07A94008EB67C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		643F81BC2DF07A89008EB67C /* habit-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "habit-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		643F81BF2DF07A8A008EB67C /* habit_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habit_trackerApp.swift; sourceTree = "<group>"; };
-		643F81C12DF07A8A008EB67C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		643F81C12DF07A8A008EB67C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		643F81C32DF07A94008EB67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		643F81C52DF07A94008EB67C /* habit_tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = habit_tracker.entitlements; sourceTree = "<group>"; };
 		643F81C72DF07A94008EB67C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				643F81BF2DF07A8A008EB67C /* habit_trackerApp.swift */,
-				643F81C12DF07A8A008EB67C /* ContentView.swift */,
+				643F81C12DF07A8A008EB67C /* WelcomeView.swift */,
 				643F81C32DF07A94008EB67C /* Assets.xcassets */,
 				643F81C52DF07A94008EB67C /* habit_tracker.entitlements */,
 				643F81C62DF07A94008EB67C /* Preview Content */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				643F81C22DF07A8A008EB67C /* ContentView.swift in Sources */,
+				643F81C22DF07A8A008EB67C /* WelcomeView.swift in Sources */,
 				643F81C02DF07A8A008EB67C /* habit_trackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
