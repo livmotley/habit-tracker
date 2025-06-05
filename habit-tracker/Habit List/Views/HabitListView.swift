@@ -21,7 +21,7 @@ struct HabitListView: View {
                     .padding(.top)
                 
                 VStack (alignment: .leading, spacing: 8){
-                    Text("June 5th 2025")
+                    Text(viewModel.dateString)
                         .font(.title2)
                         .fontWeight(.semibold)
                         .foregroundStyle(.pink)
