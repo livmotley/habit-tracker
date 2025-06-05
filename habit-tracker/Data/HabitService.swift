@@ -17,7 +17,11 @@ class HabitService {
     init () {
         habits = retrieveHabits()
     }
+    
+}
 
+// MARK: Data Storage
+extension HabitService {
     func saveHabits() {
         guard let habitsJSON = try? JSONEncoder().encode(habits) else { return }
         
@@ -28,7 +32,10 @@ class HabitService {
         guard let decodedHabits = try? JSONDecoder().decode([Habit].self, from: savedHabits) else { return [] }
         return decodedHabits
     }
-    
+}
+
+// MARK: Data Queries
+extension HabitService {
     func addHabits(_ habit: Habit) {
         habits.append(habit)
         saveHabits()
@@ -39,4 +46,17 @@ class HabitService {
         saveHabits()
     }
     
+    func increaseStreak(forHabit habit: Habit) {
+        guard let index = habits.firstIndex(where: {$0.id == habit.id}) else { return }
+        
+        habits[index] = habit
+        saveHabits()
+    }
+    
+    func resetStreak(forHabit habit: Habit) {
+        guard let index = habits.firstIndex(where: {$0.id == habit.id}) else { return }
+        
+        habits[index] = habit
+        saveHabits()
+    }
 }
