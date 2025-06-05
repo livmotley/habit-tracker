@@ -18,6 +18,7 @@ struct HabitListView: View {
                 Text("A good day starts the moment you want it to.")
                     .font(.title)
                     .fontWeight(.bold)
+                    .padding(.top)
                 
                 VStack (alignment: .leading, spacing: 8){
                     Text("June 5th 2025")
