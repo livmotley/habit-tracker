@@ -10,7 +10,8 @@ import SwiftUI
 struct HabitListView: View {
     
     @StateObject var viewModel = HabitListViewModel()
-    @State var showAddHabitForm = false
+    @State var showAddHabitForm: Bool = false
+    @State var isEditMode: Bool = false
     
     var body: some View {
         ScrollView {
@@ -33,7 +34,9 @@ struct HabitListView: View {
                 
                 LazyVStack (spacing: 20) {
                     ForEach(viewModel.habits) { habit in
-                        HabitButtonView(habit: habit)
+                        HabitButtonView(
+                            habit: habit,
+                            isEditMode: $isEditMode)
                     }
                 }
                 
@@ -61,6 +64,15 @@ struct HabitListView: View {
         }) {
             AddHabitView()
                 .presentationDragIndicator(.visible)
+        }
+        
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(isEditMode ? "Done" : "Edit") {
+                    isEditMode.toggle()
+                    viewModel.refreshHabits()
+                }
+            }
         }
     }
 }

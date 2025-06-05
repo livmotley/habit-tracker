@@ -10,9 +10,11 @@ import SwiftUI
 struct HabitButtonView: View {
     
     @ObservedObject var viewModel: HabitButtonViewModel
+    @Binding var isEditMode: Bool
     
-    init(habit: Habit) {
+    init(habit: Habit, isEditMode: Binding<Bool>) {
         viewModel = HabitButtonViewModel(habit: habit)
+        self._isEditMode = isEditMode
     }
     var body: some View {
         Button(
@@ -30,6 +32,7 @@ struct HabitButtonView: View {
                             .foregroundStyle(.yellow)
                             .font(.title2)
                             .fontWeight(.semibold)
+                            .multilineTextAlignment(.leading)
                         
                         Text(viewModel.habit.description)
                             .foregroundStyle(.primary)
@@ -44,11 +47,25 @@ struct HabitButtonView: View {
                     
                     Spacer()
                     
-                    if (viewModel.habit.isDone) {
+                    if (viewModel.habit.isDone && !isEditMode) {
                         Image(systemName: "checkmark.circle.fill")
                             .font(Font.system(size: 50))
                             .foregroundStyle(.pink)
                             .padding(.trailing)
+                    }
+                    
+                    if (isEditMode && !viewModel.isDeleted) {
+                        Button(
+                            action: {
+                                viewModel.deleteHabit()
+                            },
+                            label: {
+                                Image(systemName: "minus.circle.fill")
+                                    .font(Font.system(size: 50))
+                                    .foregroundStyle(.red)
+                                    .padding(.trailing)
+                        })
+                        
                     }
                     
                     
@@ -58,11 +75,13 @@ struct HabitButtonView: View {
                 .background(.background)
                 .cornerRadius(15)
                 .shadow(color: Color(.systemGray), radius: 3)
+                .opacity(viewModel.buttonOpacity)
             }
         )
     }
 }
 
 #Preview {
-    HabitButtonView(habit: DeveloperPreview.habits[0])
+    HabitButtonView(habit: DeveloperPreview.habits[0],
+                    isEditMode: .constant(true))
 }
