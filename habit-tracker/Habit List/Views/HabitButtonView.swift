@@ -47,7 +47,7 @@ struct HabitButtonView: View {
                     
                     Spacer()
                     
-                    if (viewModel.habit.isDone && !isEditMode) {
+                    if (viewModel.isLastDateSameAsToday() && !isEditMode) {
                         Image(systemName: "checkmark.circle.fill")
                             .font(Font.system(size: 50))
                             .foregroundStyle(.pink)
@@ -78,6 +78,7 @@ struct HabitButtonView: View {
                 .opacity(viewModel.buttonOpacity)
             }
         )
+        .disabled(viewModel.isLastDateSameAsToday())
     }
 }
 

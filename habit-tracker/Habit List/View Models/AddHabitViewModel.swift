@@ -16,7 +16,7 @@ class AddHabitViewModel: ObservableObject {
     func addNewHabit() -> Bool {
         if(emoji.count > 0 && title.count > 1 && description.count > 1) {
             error = ""
-            DeveloperPreview.habits.append(Habit(
+            HabitService.shared.addHabits(Habit(
                 id: UUID().uuidString,
                 emoji: emoji,
                 title: title,

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Habit: Identifiable {
+struct Habit: Identifiable, Encodable, Decodable {
     let id: String
     var emoji: String
     var title: String
     var description: String
     var streak: Int
-    var isDone: Bool = false
+    var lastDateDone: Date?
 }
