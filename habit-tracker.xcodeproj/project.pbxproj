@@ -17,6 +17,8 @@
 		643F81DE2DF1AECB008EB67C /* HabitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F81DD2DF1AECB008EB67C /* HabitListViewModel.swift */; };
 		643F81E02DF1B1F2008EB67C /* HabitButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F81DF2DF1B1F2008EB67C /* HabitButtonView.swift */; };
 		64C307DB2DF1CE7200E7047C /* HabitButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C307DA2DF1CE7100E7047C /* HabitButtonViewModel.swift */; };
+		64C307DD2DF1D8D800E7047C /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C307DC2DF1D8D800E7047C /* AddHabitView.swift */; };
+		64C307DF2DF1DC8400E7047C /* AddHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C307DE2DF1DC8400E7047C /* AddHabitViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		643F81DD2DF1AECB008EB67C /* HabitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewModel.swift; sourceTree = "<group>"; };
 		643F81DF2DF1B1F2008EB67C /* HabitButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitButtonView.swift; sourceTree = "<group>"; };
 		64C307DA2DF1CE7100E7047C /* HabitButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitButtonViewModel.swift; sourceTree = "<group>"; };
+		64C307DC2DF1D8D800E7047C /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		64C307DE2DF1DC8400E7047C /* AddHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			children = (
 				643F81D32DF1AE57008EB67C /* HabitListView.swift */,
 				643F81DF2DF1B1F2008EB67C /* HabitButtonView.swift */,
+				64C307DC2DF1D8D800E7047C /* AddHabitView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			children = (
 				643F81DD2DF1AECB008EB67C /* HabitListViewModel.swift */,
 				64C307DA2DF1CE7100E7047C /* HabitButtonViewModel.swift */,
+				64C307DE2DF1DC8400E7047C /* AddHabitViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -218,7 +224,9 @@
 				643F81DA2DF1AEAF008EB67C /* DeveloperPreview.swift in Sources */,
 				643F81DE2DF1AECB008EB67C /* HabitListViewModel.swift in Sources */,
 				643F81C22DF07A8A008EB67C /* WelcomeView.swift in Sources */,
+				64C307DD2DF1D8D800E7047C /* AddHabitView.swift in Sources */,
 				64C307DB2DF1CE7200E7047C /* HabitButtonViewModel.swift in Sources */,
+				64C307DF2DF1DC8400E7047C /* AddHabitViewModel.swift in Sources */,
 				643F81C02DF07A8A008EB67C /* habit_trackerApp.swift in Sources */,
 				643F81E02DF1B1F2008EB67C /* HabitButtonView.swift in Sources */,
 			);
